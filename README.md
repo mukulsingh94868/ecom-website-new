@@ -106,7 +106,7 @@ The project uses the **Fake Store API** (`https://api.escuelajs.co/api/v1`):
 ### CartContext.tsx
 
 - Global state management for shopping cart
-- Provides `addToCart` and `removeFromCart` functions
+- Provides `addToCart` functions
 
 ## 🎨 Styling
 
