@@ -5,10 +5,9 @@ A modern, responsive e-commerce website built with React, TypeScript, and Contex
 ## 🚀 Features
 
 - **Product Catalog**: Browse products with real-time API integration
-- **Dynamic Filtering**: Multi-select dropdown category filters
+- **Dynamic Filtering**: Multi-select checkbox for category filters
 - **Product Details**: View detailed information about individual products
 - **Shopping Cart**: Add products to cart with context-based state management
-- **Responsive Design**: Mobile-friendly UI
 - **TypeScript Support**: Fully typed for better development experience
 
 ## 📋 Project Structure
@@ -75,24 +74,6 @@ npm start
 
 The app will open at [http://localhost:3000](http://localhost:3000)
 
-## 🎯 Available Scripts
-
-### `npm start`
-
-Runs the app in development mode. Auto-reloads on code changes.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production. Optimized and minified.
-
-### `npm run eject`
-
-Ejects from Create React App configuration (one-way operation).
-
 ## 🔌 API Integration
 
 The project uses the **Fake Store API** (`https://api.escuelajs.co/api/v1`):
@@ -133,31 +114,3 @@ The project uses CSS modules with a responsive design. Key style files:
 
 - `App.css` - Component styles
 - `index.css` - Global styles
-
-## 🚀 Deployment
-
-Build the production version:
-
-```bash
-npm run build
-```
-
-Deploy the `build/` folder to your hosting service (Netlify, Vercel, AWS, etc.)
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Feel free to fork, submit issues, and create pull requests for improvements.
-
-## ❓ Troubleshooting
-
-- **Port 3000 already in use**: Kill the process using port 3000 or specify a different port
-- **API errors**: Check your internet connection and ensure the API is accessible
-- **Dependencies issues**: Try `npm install` or `npm ci` to reinstall dependencies
-
----
-
-**Happy coding! 🎉**
