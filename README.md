@@ -1,46 +1,163 @@
-# Getting Started with Create React App
+# E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive e-commerce website built with React, TypeScript, and Context API. Features dynamic product filtering, detailed product views, and a shopping cart system.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Product Catalog**: Browse products with real-time API integration
+- **Dynamic Filtering**: Multi-select dropdown category filters
+- **Product Details**: View detailed information about individual products
+- **Shopping Cart**: Add products to cart with context-based state management
+- **Responsive Design**: Mobile-friendly UI
+- **TypeScript Support**: Fully typed for better development experience
+
+## 📋 Project Structure
+
+```
+src/
+├── api/                 # API integration
+│   └── productApi.ts    # Product and category API calls
+├── component/           # Reusable React components
+│   ├── Header.tsx       # Header component
+│   ├── Footer.tsx       # Footer component
+│   └── ProductCard.tsx  # Product card component
+├── context/             # React Context
+│   └── CartContext.tsx  # Shopping cart context
+├── data/                # Static data
+│   └── products.ts      # Product data
+├── pages/               # Page components
+│   ├── Home.tsx         # Home page with filters
+│   └── ProductDetail.tsx # Product detail page
+├── types/               # TypeScript types
+│   └── index.tsx        # Type definitions
+├── App.tsx              # Main app component
+├── index.tsx            # Entry point
+├── App.css              # Styles
+└── index.css            # Global styles
+```
+
+## 🛠️ Tech Stack
+
+- **React** - UI library
+- **TypeScript** - Type safety
+- **React Router** - Client-side routing
+- **Axios** - HTTP client
+- **Context API** - State management
+- **CSS** - Styling
+
+## 📦 Installation
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Setup
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd ecom-website-new
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+```
+
+The app will open at [http://localhost:3000](http://localhost:3000)
+
+## 🎯 Available Scripts
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in development mode. Auto-reloads on code changes.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production. Optimized and minified.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Ejects from Create React App configuration (one-way operation).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔌 API Integration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The project uses the **Fake Store API** (`https://api.escuelajs.co/api/v1`):
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **GET** `/products` - Fetch all products
+- **GET** `/products?categoryId={id}` - Fetch products by category
+- **GET** `/products/{id}` - Fetch product details by ID
+- **GET** `/categories` - Fetch all categories
 
-## Learn More
+## 📖 Key Components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Home.tsx
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Displays product grid with multi-select category filters
+- Dynamically fetches products based on selected categories
+- Shows "No product found" when no products match filters
+
+### ProductDetail.tsx
+
+- Fetches individual product details using `fetchProductById`
+- Uses `useEffect` for dynamic data loading based on product ID
+- Displays loading and error states
+
+### ProductCard.tsx
+
+- Reusable component for displaying product information
+- Links to product detail page
+- Add to cart functionality
+
+### CartContext.tsx
+
+- Global state management for shopping cart
+- Provides `addToCart` and `removeFromCart` functions
+
+## 🎨 Styling
+
+The project uses CSS modules with a responsive design. Key style files:
+
+- `App.css` - Component styles
+- `index.css` - Global styles
+
+## 🚀 Deployment
+
+Build the production version:
+
+```bash
+npm run build
+```
+
+Deploy the `build/` folder to your hosting service (Netlify, Vercel, AWS, etc.)
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🤝 Contributing
+
+Feel free to fork, submit issues, and create pull requests for improvements.
+
+## ❓ Troubleshooting
+
+- **Port 3000 already in use**: Kill the process using port 3000 or specify a different port
+- **API errors**: Check your internet connection and ensure the API is accessible
+- **Dependencies issues**: Try `npm install` or `npm ci` to reinstall dependencies
+
+---
+
+**Happy coding! 🎉**
